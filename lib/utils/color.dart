@@ -1,0 +1,41 @@
+import 'package:flutter/material.dart';
+
+Color primaryColor = const Color(0xFF0E7CC5);
+Color secondaryColor = const Color(0xFF2D9CDB);
+Color accentColor = const Color(0xFF56CCF2);
+Color backgroundColor = const Color(0xFFFFFFFF);
+Color grassColor = const Color(0xFF98DB7C);
+Color textColor = const Color(0xFF000000);
+Color greyTextColor = const Color(0xFF464545);
+Color errorColor = const Color(0xFFE74C3C);
+Color successColor = const Color(0xFF0EC564);
+Color warningColor = const Color(0xFFF39C12);
+Color infoColor = const Color(0xFF3498DB);
+Color disabledColor = const Color(0xFFBDBDBD);
+Color customGreenColor = const Color(0xFF1FC3A9);
+Color greenblack = const Color.fromARGB(255, 11, 99, 84);
+Color shadowColor = const Color(0xFF000000).withOpacity(0.1);
+Color fillColor = const Color(0xFFF1F5FF);
+
+Color borderColor = const Color(0xFFE0E0E0);
+Color fillBorderColor = const Color(0xFFE0E0E0).withOpacity(0.75);
+Color scaffoldColor = const Color(0xFFF9F9F9);
+Color cardColor = const Color(0xFFFFFFFF);
+Color bgCardColor = const Color(0xFFEEF6FB);
+Color pendingColor = const Color(0xFFF1E900);
+Color diterimaColor = const Color(0xFF77CC7D);
+Color deskripsiColor = const Color.fromARGB(255, 131, 131, 131);
+
+// const Color secondaryColor = Color(0xFF2D9CDB);
+// const Color accentColor = Color(0xFF56CCF2);
+// const Color backgroundColor = Color(0xFFFFFFFF);
+// const Color textColor = Color(0xFF000000);
+// const Color errorColor = Color(0xFFE74C3C);
+// const Color successColor = Color(0xFF27AE60);
+// const Color warningColor = Color(0xFFF39C12);
+// const Color infoColor = Color(0xFF3498DB);
+// const Color disabledColor = Color(0xFFBDBDBD);
+// const Color shadowColor = Color(0xFF000000).withOpacity(0.1);
+// const Color borderColor = Color(0xFFE0E0E0);
+// const Color scaffoldColor = Color(0xFFF9F9F9);
+// const Color cardColor = Color(0xFFFFFFFF);
