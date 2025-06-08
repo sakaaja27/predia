@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:predia/utils/color.dart';
+import 'package:get/get.dart';
 import 'package:predia/widget/reusableContentBottom.dart';
 import 'package:predia/widget/reusableTopLogo.dart';
 
@@ -33,7 +34,9 @@ class BoardingTwo extends StatelessWidget {
             title: 'Mulai Sehat dengan PreDia',
             subtitle:
                 'Temukan Kendali Sehat bersama PreDia. Panduan Cerdas Anda untuk Mencegah Diabetes Sejak Dini!',
-            onNext: () {},
+            onNext: () {
+              Get.offAllNamed('/login');
+            },
           ),
         ],
       ),

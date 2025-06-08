@@ -16,7 +16,7 @@ Color customGreenColor = const Color(0xFF1FC3A9);
 Color greenblack = const Color.fromARGB(255, 11, 99, 84);
 Color shadowColor = const Color(0xFF000000).withOpacity(0.1);
 Color fillColor = const Color(0xFFF1F5FF);
-
+Color inputFillColor = Color(0xFFF5F5F5);
 Color borderColor = const Color(0xFFE0E0E0);
 Color fillBorderColor = const Color(0xFFE0E0E0).withOpacity(0.75);
 Color scaffoldColor = const Color(0xFFF9F9F9);
