@@ -7,6 +7,8 @@ class ReusableTextInput extends StatelessWidget {
   final bool obscureText;
   final TextEditingController? controller;
   final TextInputType keyboardType;
+  final bool readOnly;
+  final VoidCallback? onTap;
 
   const ReusableTextInput({
     super.key,
@@ -15,6 +17,8 @@ class ReusableTextInput extends StatelessWidget {
     this.obscureText = false,
     this.controller,
     this.keyboardType = TextInputType.text,
+    this.readOnly = false,
+    this.onTap,
   });
 
   @override
@@ -22,15 +26,14 @@ class ReusableTextInput extends StatelessWidget {
     return Column(
       crossAxisAlignment: CrossAxisAlignment.start,
       children: [
-        Text(
-          label,
-          style: const TextStyle(fontWeight: FontWeight.w600),
-        ),
+        Text(label, style: const TextStyle(fontWeight: FontWeight.w600)),
         const SizedBox(height: 6),
         TextField(
           controller: controller,
           obscureText: obscureText,
           keyboardType: keyboardType,
+          readOnly: readOnly,
+          onTap: onTap,
           decoration: InputDecoration(
             hintText: hintText,
             filled: true,

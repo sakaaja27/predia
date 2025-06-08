@@ -1,6 +1,8 @@
+import 'package:flutter/gestures.dart';
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:predia/utils/color.dart';
+import 'package:get/get.dart';
 import 'package:predia/widget/reusableSubmitButton.dart';
 import 'package:predia/widget/reusableTextInput.dart';
 import 'package:predia/widget/reusablecontenttopauth.dart';
@@ -90,13 +92,18 @@ class LoginScreen extends StatelessWidget {
                       text: TextSpan(
                         text: 'apakah tidak punya akun? ',
                         style: TextStyle(color: Colors.grey[600]),
-                        children: const [
+                        children: [
                           TextSpan(
                             text: 'Daftar',
-                            style: TextStyle(
+                            style: const TextStyle(
                               fontWeight: FontWeight.bold,
                               color: Colors.black,
                             ),
+                            recognizer:
+                                TapGestureRecognizer()
+                                  ..onTap = () {
+                                    Get.offAllNamed('/register');
+                                  },
                           ),
                         ],
                       ),
