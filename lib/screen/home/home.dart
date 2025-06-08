@@ -3,6 +3,7 @@ import 'package:predia/utils/color.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:get/get.dart';
 import 'package:predia/widget/reusableBottomNav.dart';
+import 'package:predia/widget/reusableCardAnalisis.dart';
 
 class Home extends StatelessWidget {
   const Home({super.key});
@@ -84,19 +85,19 @@ class Home extends StatelessWidget {
                               'Pengingat Cerdas',
                               style: GoogleFonts.poppins(
                                 fontWeight: FontWeight.w700,
-                                color: Colors.white,
+                                color: Colors.black,
                                 fontSize: 16,
                               ),
                             ),
                             const Spacer(),
-                            Icon(Icons.settings, color: Colors.white, size: 20),
+                            Icon(Icons.settings, color: Colors.black, size: 20),
                           ],
                         ),
                       ),
                       Container(
                         width: double.infinity,
                         padding: const EdgeInsets.symmetric(
-                          vertical: 18,
+                          vertical: 10,
                           horizontal: 16,
                         ),
                         decoration: const BoxDecoration(
@@ -115,129 +116,21 @@ class Home extends StatelessWidget {
                   ),
                 ),
                 const SizedBox(height: 16),
-                Card(
-                  shape: RoundedRectangleBorder(
-                    borderRadius: BorderRadius.circular(16),
-                  ),
-                  elevation: 2,
-                  child: ClipRRect(
-                    borderRadius: BorderRadius.circular(16),
-                    child: Container(
-                      height: 100,
-                      width: double.infinity,
-                      decoration: BoxDecoration(
-                        color: greenAnalisis.withOpacity(0.3),
-                      ),
-                      child: Stack(
-                        children: [
-                          Positioned(
-                            right: -20,
-                            bottom: -30,
-                            child: Image.asset(
-                              'assets/images/luka_scan.png',
-                              width: 100,
-                              height: 130,
-                              fit: BoxFit.cover,
-                            ),
-                          ),
-                          Padding(
-                            padding: const EdgeInsets.symmetric(
-                              vertical: 10,
-                              horizontal: 16,
-                            ),
-                            child: Column(
-                              crossAxisAlignment: CrossAxisAlignment.start,
-                              mainAxisAlignment: MainAxisAlignment.center,
-                              children: [
-                                Text(
-                                  'Analisa Luka',
-                                  style: GoogleFonts.poppins(
-                                    fontWeight: FontWeight.w700,
-                                    color: Colors.white,
-                                    fontSize: 16,
-                                  ),
-                                ),
-                                const SizedBox(height: 8),
-                                const Text(
-                                  'Menganalisis untuk\nmengindikasikan risiko diabetes',
-                                  style: TextStyle(
-                                    color: Colors.white,
-                                    fontSize: 14,
-                                    height: 1.4,
-                                  ),
-                                  maxLines: 3,
-                                  overflow: TextOverflow.ellipsis,
-                                ),
-                              ],
-                            ),
-                          ),
-                        ],
-                      ),
-                    ),
-                  ),
+                ReusableCardAnalisis(
+                  title: 'Analisa Luka',
+                  description:
+                      'Menganalisis untuk\nmengindikasikan risiko diabetes',
+                  backgroundColor: greenAnalisis.withOpacity(0.3),
+                  imagePath: 'assets/images/luka_scan.png',
                 ),
 
                 const SizedBox(height: 16),
-                Card(
-                  shape: RoundedRectangleBorder(
-                    borderRadius: BorderRadius.circular(16),
-                  ),
-                  elevation: 2,
-                  child: ClipRRect(
-                    borderRadius: BorderRadius.circular(16),
-                    child: Container(
-                      height: 100,
-                      width: double.infinity,
-                      decoration: BoxDecoration(
-                        color: infoColor.withOpacity(0.5),
-                      ),
-                      child: Stack(
-                        children: [
-                          Positioned(
-                            right: -20,
-                            bottom: -30,
-                            child: Image.asset(
-                              'assets/images/scan_makanan.png',
-                              width: 100,
-                              height: 130,
-                              fit: BoxFit.cover,
-                            ),
-                          ),
-                          Padding(
-                            padding: const EdgeInsets.symmetric(
-                              vertical: 10,
-                              horizontal: 16,
-                            ),
-                            child: Column(
-                              crossAxisAlignment: CrossAxisAlignment.start,
-                              mainAxisAlignment: MainAxisAlignment.center,
-                              children: [
-                                Text(
-                                  'Analisa Makanan',
-                                  style: GoogleFonts.poppins(
-                                    fontWeight: FontWeight.w700,
-                                    color: Colors.white,
-                                    fontSize: 16,
-                                  ),
-                                ),
-                                const SizedBox(height: 8),
-                                const Text(
-                                  'dapatkan informasi tentang\ntingkat gula darah ',
-                                  style: TextStyle(
-                                    color: Colors.white,
-                                    fontSize: 14,
-                                    height: 1.4,
-                                  ),
-                                  maxLines: 3,
-                                  overflow: TextOverflow.ellipsis,
-                                ),
-                              ],
-                            ),
-                          ),
-                        ],
-                      ),
-                    ),
-                  ),
+
+                ReusableCardAnalisis(
+                  title: 'Analisa Makanan',
+                  description: 'Dapatkan informasi tentang\ntingkat gula darah',
+                  backgroundColor: infoColor.withOpacity(0.5),
+                  imagePath: 'assets/images/scan_makanan.png',
                 ),
               ],
             ),
@@ -249,7 +142,7 @@ class Home extends StatelessWidget {
         width: 65,
         height: 65,
         decoration: BoxDecoration(
-          color: primaryColor,
+          color: greenAnalisis,
           shape: BoxShape.circle,
           boxShadow: [
             BoxShadow(
@@ -264,7 +157,7 @@ class Home extends StatelessWidget {
           onTap: () => Get.offAllNamed('/scan_luka'),
           borderRadius: BorderRadius.circular(999),
           child: const Icon(
-            Icons.workspace_premium_rounded,
+            Icons.phone_android_outlined,
             color: Colors.white,
             size: 30,
           ),
