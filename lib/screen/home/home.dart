@@ -1,6 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:predia/utils/color.dart';
 import 'package:google_fonts/google_fonts.dart';
+import 'package:get/get.dart';
+import 'package:predia/widget/reusableBottomNav.dart';
 
 class Home extends StatelessWidget {
   const Home({super.key});
@@ -242,6 +244,34 @@ class Home extends StatelessWidget {
           ),
         ],
       ),
+      bottomNavigationBar: CustomBottomNavBar(currentIndex: 0),
+      floatingActionButton: Container(
+        width: 65,
+        height: 65,
+        decoration: BoxDecoration(
+          color: primaryColor,
+          shape: BoxShape.circle,
+          boxShadow: [
+            BoxShadow(
+              color: Colors.black.withOpacity(0.1),
+              spreadRadius: 1,
+              blurRadius: 10,
+              offset: Offset(0, 0),
+            ),
+          ],
+        ),
+        child: InkWell(
+          onTap: () => Get.offAllNamed('/scan_luka'),
+          borderRadius: BorderRadius.circular(999),
+          child: const Icon(
+            Icons.workspace_premium_rounded,
+            color: Colors.white,
+            size: 30,
+          ),
+        ),
+      ),
+
+      floatingActionButtonLocation: FloatingActionButtonLocation.centerDocked,
     );
   }
 }
