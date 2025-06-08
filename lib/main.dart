@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:predia/screen/auth/login.dart';
+import 'package:predia/screen/home/home.dart';
 import 'package:predia/screen/onBoarding/BoardingOne.dart';
 import 'package:predia/screen/auth/register.dart';
 import 'package:predia/screen/auth/splash.dart';
@@ -24,7 +25,8 @@ class MainApp extends StatelessWidget {
         GetPage(name: '/login', page: () => LoginScreen()),
         GetPage(name: '/register', page: () => RegisterScreen()),
         GetPage(name: '/boardingOne', page: () => BoardinOne()),
-        GetPage(name: '/boardingTwo', page: () => BoardingTwo())
+        GetPage(name: '/boardingTwo', page: () => BoardingTwo()),
+        GetPage(name: '/home', page: () => Home())
       ],
     );
   }

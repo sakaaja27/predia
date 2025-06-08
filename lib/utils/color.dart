@@ -13,6 +13,7 @@ Color warningColor = const Color(0xFFF39C12);
 Color infoColor = const Color(0xFF3498DB);
 Color disabledColor = const Color(0xFFBDBDBD);
 Color customGreenColor = const Color(0xFF1FC3A9);
+Color greenAnalisis = const Color(0xFF04B301);
 Color greenblack = const Color.fromARGB(255, 11, 99, 84);
 Color shadowColor = const Color(0xFF000000).withOpacity(0.1);
 Color fillColor = const Color(0xFFF1F5FF);

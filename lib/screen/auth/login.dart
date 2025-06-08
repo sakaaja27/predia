@@ -1,7 +1,6 @@
 import 'package:flutter/gestures.dart';
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
-import 'package:predia/utils/color.dart';
 import 'package:get/get.dart';
 import 'package:predia/widget/reusableSubmitButton.dart';
 import 'package:predia/widget/reusableTextInput.dart';
@@ -20,7 +19,7 @@ class LoginScreen extends StatelessWidget {
             height: 200,
             decoration: const BoxDecoration(
               image: DecorationImage(
-                image: AssetImage('assets/images/background_phone.jpg'),
+                image: AssetImage('assets/images/background_orange.jpg'),
                 fit: BoxFit.cover,
               ),
             ),
@@ -68,7 +67,9 @@ class LoginScreen extends StatelessWidget {
                     ),
                   ),
                   const SizedBox(height: 15),
-                  ReusableSubmitButton(text: 'Masuk', onPressed: () {}),
+                  ReusableSubmitButton(text: 'Masuk', onPressed: () {
+                    Get.offAllNamed('/home');
+                  }),
                   const SizedBox(height: 30),
                   Row(
                     children: const [
