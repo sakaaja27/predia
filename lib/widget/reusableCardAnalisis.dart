@@ -19,7 +19,7 @@ class ReusableCardAnalisis extends StatelessWidget {
     required this.backgroundColor,
     required this.imagePath,
     this.height = 100,
-    this.imageWidth = 100,
+    this.imageWidth = 80,
     this.imageHeight = 120,
     this.titleColor = Colors.black,
     this.descColor = Colors.black,
@@ -43,8 +43,8 @@ class ReusableCardAnalisis extends StatelessWidget {
           child: Stack(
             children: [
               Positioned(
-                right: -20,
-                bottom: -30,
+                right: -30,
+                bottom: -40,
                 child: Image.asset(
                   imagePath,
                   width: imageWidth,
@@ -55,18 +55,18 @@ class ReusableCardAnalisis extends StatelessWidget {
               Padding(
                 padding: const EdgeInsets.symmetric(
                   vertical: 10,
-                  horizontal: 16,
+                  horizontal: 10,
                 ),
                 child: Column(
                   crossAxisAlignment: CrossAxisAlignment.start,
-                  mainAxisAlignment: MainAxisAlignment.center,
+                  mainAxisAlignment: MainAxisAlignment.start,
                   children: [
                     Text(
                       title,
                       style: GoogleFonts.poppins(
                         fontWeight: FontWeight.w700,
                         color: titleColor,
-                        fontSize: 16,
+                        fontSize: 13,
                       ),
                     ),
                     const SizedBox(height: 8),
@@ -74,7 +74,7 @@ class ReusableCardAnalisis extends StatelessWidget {
                       description,
                       style: TextStyle(
                         color: descColor,
-                        fontSize: 14,
+                        fontSize: 12,
                         height: 1.4,
                       ),
                       maxLines: 3,
